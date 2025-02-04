@@ -1,0 +1,6 @@
+<form (ngSubmit)="onSubmit()" class="max-w-md mx-auto">
+  <input [(ngModel)]="formData.name" name="name" placeholder="Name" class="w-full p-2 mb-4 border rounded">
+  <input [(ngModel)]="formData.email" name="email" placeholder="Email" class="w-full p-2 mb-4 border rounded">
+  <textarea [(ngModel)]="formData.message" name="message" placeholder="Message" class="w-full p-2 mb-4 border rounded"></textarea>
+  <button type="submit" class="bg-blue-500 text-white p-2 rounded">Submit</button>
+</form>

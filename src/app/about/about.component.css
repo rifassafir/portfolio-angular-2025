@@ -1,0 +1,74 @@
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(-10px); /* Move up by 10px */
+  }
+  50% {
+    transform: translateY(10px); /* Move down by 10px */
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 4s ease-in-out infinite;
+}
+
+/* Typing effect (letter by letter) */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width:42%; /* Set to 100% to allow full text to appear */
+  }
+}
+
+/* Cursor blink effect */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Typing effect on h2 */
+.typing-effect {
+  display: inline-block;
+  width: 0; /* Start with no text */
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide the rest of the text */
+  border-right: 4px solid; /* Simulate the typing cursor */
+  animation: typing 4s steps(30) infinite, blink 0.75s step-end infinite;
+}
+
+/* Fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Apply fade-in effect */
+.fade-in {
+  animation: fadeIn 2s ease-in ease-out forwards;
+}
+
+/* Loop typing animation */
+.looping-typing {
+  animation: typing 4s steps(30) infinite, blink 0.75s step-end infinite;
+}
+
+
+.social-icon {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;  /* Center horizontally */
+  align-items: center;      /* Center vertically */
+  text-align: center;
+}
+
+.social-icon:hover {
+  background-color: black;
+  color: white;
+}
