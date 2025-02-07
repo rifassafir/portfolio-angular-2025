@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Firestore, collectionData, collection } from '@angular/fire/firestore';
+import { Firestore, collectionData,addDoc, collection } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
@@ -17,5 +17,15 @@ export class DataService {
     return collectionData(skillsCollection, { idField: 'id' });
   }
 
-  // Add similar methods for work, experience, etc.
+  // Add similar methods for work, experience, etc
+  async createSkill(data: any) {
+    try {
+      const skillsCollection = collection(this.firestore, 'skills'); // Reference to the 'skills' collection
+      await addDoc(skillsCollection, data); // Add a new document to the collection
+      alert('Skills submitted successfully!');
+    } catch (error) {
+      alert('Error submitting form: ' + error);
+    }
+  }
+
 }

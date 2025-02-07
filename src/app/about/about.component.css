@@ -17,7 +17,7 @@
     width: 0;
   }
   to {
-    width:42%; /* Set to 100% to allow full text to appear */
+    width:40%; /* Set to 100% to allow full text to appear */
   }
 }
 
@@ -35,7 +35,7 @@
   white-space: nowrap; /* Prevent text wrapping */
   overflow: hidden; /* Hide the rest of the text */
   border-right: 4px solid; /* Simulate the typing cursor */
-  animation: typing 4s steps(30) infinite, blink 0.75s step-end infinite;
+  animation: typing 7s steps(30) infinite, blink 0.75s step-end infinite;
 }
 
 /* Fade-in effect */
@@ -71,4 +71,8 @@
 .social-icon:hover {
   background-color: black;
   color: white;
+}
+.dotted-background {
+  background: radial-gradient(circle at center, #000 10%, transparent 10%);
+  background-size: 10px 10px;
 }

@@ -1,50 +1,50 @@
-<div class="flex flex-col md:flex-row items-center gap-5 max-w-screen-xl mx-auto py-8">
-  <div class="flex-shrink-0 w-150 h-150 md:w-150 md:h-150">
-    <img src="../../assets/images/safir-dark-bg.png" alt="Safir Sainudeen" class="w-full h-full object-cover animate-bounce-slow">
-  </div>
-  <div class="flex-grow text-center md:text-left">
-    <div>
-       <h1 class="font-extrabold text-5xl sm:text-6xl text-gray-800 mb-4">
-         Hi, I'm <br><span class="text-pink-700 text-6xl sm:text-7xl">Safir Sainudeen</span>
-       </h1>
-    </div>
-    <div *ngFor="let item of aboutData" class="mb-6">
-      <h2 class="text-3xl font-bold text-gray-800 my-3 fade-in typing-effect text-pink-800">{{ item.title }}</h2>
-      <p class="text-gray-600 leading-relaxed font-regular" [innerHTML]="item.description"></p>
-    </div>
-    <div class="mt-10 flex justify-between md:justify-between gap-8 font-light">
-      <div>
-        <h3 class="text font-bold text-gray-800 mb-3">FIND ME ON</h3>
-        <div class="flex gap-4 text-2xl">
-          <a href="#" class="social-icon shadow rounded"><i class="fa fa-facebook"></i></a>
-          <a href="#" class="social-icon shadow rounded"><i class="fa fa-linkedin"></i></a>
-          <a href="#" class="social-icon shadow rounded"><i class="fa fa-twitter"></i></a>
+<section id="about" class="mt-15 relative overflow-hidden bg-gradient-to-br from-orange-200 via-rose-100 to-purple-100 ">
+  <div class="flex flex-col md:flex-row justify-between gap-45 max-w-screen-xl mx-auto py-10 ">
+    <div class=" flex-shrink-0 w-60 h-60 md:w-80 md:h-80 py-4 ">
+            <img src="../../assets/profile/5cc.png" alt="Safir Sainudeen"
+                class="relative mt-42 w-120 rounded-lg scale-220 transform z-30">
+            <div class="relative bottom-50 right-60 z-20 w-150 h-150  border-10 border-dashed border-red-300 rounded-full"></div>
+            <div class="relative bottom-260 right-80 z-20 w-60 h-60  border-8 border-dashed border-orange-300 rounded-full"></div>
+            <div class="relative bottom-300  left-70 z-20 w-20 h-20  border-5 border-dashed border-gray-400 rounded-full"></div>
+            <div class="relative bottom-270 left-100 z-20 w-40 h-40  border-6 border-dashed border-red-200 rounded-full"></div>
+            <div class="relative bg-amber-700">
+              <div class="absolute bottom-25 left-250 w-64 h-32 bg-[radial-gradient(circle_at_center,#000_10%,transparent_10%)] bg-[length:20px_15px]"></div>
+            </div>
         </div>
-        <div class="gap-4 text-l mt-10">
-          <h4 class="font-bold text-gray-800 mb-3">PHONE NUMBER</h4>
-          <div class="flex gap-4">
-            <i class="fa fa-phone"></i> +91 7591980170
-          </div>
-        </div>
-        <div class="gap-4 text-l mt-10">
-          <h4 class="font-bold text-gray-800 mb-3">EMAIL ID(s)</h4>
-          <div class="flex gap-4">
-            <i class="fa fa-envelope"></i> <a href="mailto:rifassafir&#64;gmail.com">rifassafir&#64;gmail.com</a>
-            <i class="fa fa-envelope"></i> <a href="mailto:safirsainudeen&#64;gmail.com">safirsainudeen&#64;gmail.com</a>
-          </div>
-        </div>
-      </div>
+        <div class="flex-grow w-full md:w-3/5 text-center md:text-left">
+            <h4 class="font-bold text-3xl"> Hello, I'm</h4>
+            <h1 class="font-bold text-5xl sm:text-6xl text-gray-800 mb-6 leading-tight">
+                <span class="text-rose-400 text-8xl sm:text-8xl">Safir
+                  <span class="text-gray-700">Sainudeen</span><span>
+                    <span class="ml-1 inline-block w-4 h-4 bg-red-400 rounded-full"></span>
+                  </span>
+                </span>
+            </h1>
 
-      <!-- Best Skills Section -->
-      <div>
-        <h3 class="font-bold text-gray-800 mb-3">BEST SKILLS ON</h3>
-        <div class="flex gap-4 text-2xl">
-          <a href="#" class="social-icon shadow rounded"><i class="fa fa-html5" aria-hidden="true"></i></a>
-          <a href="#" class="social-icon shadow rounded"><i class="fa fa-code" aria-hidden="true"></i></a>
-          <a href="#" class="social-icon shadow rounded"><i class="fa fa-git" aria-hidden="true"></i></a>
-          <a href="#" class="social-icon shadow rounded"><i class="fa fa-css3" aria-hidden="true"></i></a>
+            <div *ngFor="let item of aboutData" class="mb-8">
+                <h2 class="text-3xl font-bold my-4 fade-in typing-effect text-pink-800">{{ item.title }}</h2>
+                <p class="text-gray-700 leading-relaxed font-light text-lg" [innerHTML]="item.description"></p>
+            </div>
+            <div class="mt-12 flex flex-col md:flex-row justify-between gap-10">
+                <div>
+                    <h3 class="text-2xl font-bold text-red-400 mb-4">Find me on</h3>
+                    <div class="flex gap-6 text-2xl">
+                        <a href="#" class="social-icon shadow-lg p-3 rounded-full"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="social-icon shadow-lg p-3 rounded-full"><i class="fa fa-linkedin"></i></a>
+                        <a href="#" class="social-icon shadow-lg p-3 rounded-full"><i class="fa fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-red-400 mb-4">Best Skills on</h3>
+                    <div class="flex gap-6 text-2xl">
+                        <a href="#" class="social-icon shadow-lg p-3 rounded-full"><i class="fa fa-html5"></i></a>
+                        <a href="#" class="social-icon shadow-lg p-3 rounded-full"><i class="fa fa-code"></i></a>
+                        <a href="#" class="social-icon shadow-lg p-3 rounded-full"><i class="fa fa-git"></i></a>
+                        <a href="#" class="social-icon shadow-lg p-3 rounded-full"><i class="fa fa-css3"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-</div>
+</section>
+

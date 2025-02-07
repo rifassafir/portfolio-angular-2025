@@ -1,18 +1,16 @@
-<nav class="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 p-4 shadow-lg">
+<nav class="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 p-4 shadow-lg fixed top-0 left-0 w-full z-50">
   <div class="container mx-auto flex justify-between items-center">
     <!-- Logo -->
     <div class="flex items-center space-x-3">
       <img src="../assets/resume-logo.jpg" alt="Logo" class="w-8 h-8 rounded-full shadow-md">
-      <a routerLink="/" class="text-white text-2xl font-bold tracking-wide">Porfolio</a>
+      <a routerLink="/" class="text-white text-2xl font-bold tracking-wide">Portfolio</a>
     </div>
 
     <!-- Navigation Links -->
     <div class="hidden md:flex space-x-6">
-      <a routerLink="/" class="text-white font-medium hover:text-gray-200 transition duration-300">About</a>
-      <a routerLink="/skills" class="text-white font-medium hover:text-gray-200 transition duration-300">Skills</a>
-      <a routerLink="/work" class="text-white font-medium hover:text-gray-200 transition duration-300">Work</a>
-      <a routerLink="/experience" class="text-white font-medium hover:text-gray-200 transition duration-300">Experience</a>
-      <a routerLink="/contact" class="text-white font-medium hover:text-gray-200 transition duration-300">Contact</a>
+      <a (click)="smoothScroll('about', 80)" class="cursor-pointer text-white font-medium hover:text-gray-200 transition duration-300">About</a>
+      <a (click)="smoothScroll('skills', 40)" class="cursor-pointer text-white font-medium hover:text-gray-200 transition duration-300">Skills</a>
+      <a  (click)="smoothScroll('contact', 40)" class="cursor-pointer text-white font-medium hover:text-gray-200 transition duration-300">Contact</a>
     </div>
 
     <!-- Mobile Menu Button -->
@@ -22,8 +20,6 @@
   </div>
 </nav>
 <router-outlet></router-outlet>
-
-<!-- Fixed Footer -->
 <footer class="font-regular fixed bottom-0 left-0 w-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 p-1 shadow-lg text-white">
   <div class="container mx-auto flex justify-between items-center">
     <!-- Contact Number -->
