@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { DataService } from '../data.service';
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+
 @Component({
   selector: 'app-skills',
   standalone: true,
@@ -9,17 +10,22 @@ import { CommonModule } from '@angular/common';
   styleUrl: './skills.component.css'
 })
 export class SkillsComponent {
+  isBrowser: boolean;
   skillsDataList: any;
-  constructor(private firestoreService: DataService) {}
+  constructor(private firestoreService: DataService, @Inject(PLATFORM_ID) private platformId: object) {
+    this.isBrowser = isPlatformBrowser(platformId);
+  }
   ngOnInit(): void {
-    this.firestoreService.getSkillsData().subscribe((data) => {
-      this.skillsDataList = data[0].skillList;
-    });
+    if (this.isBrowser) {
+      this.firestoreService.getSkillsData().subscribe((data) => {
+        this.skillsDataList = data[0].skillList;
+      });
+    }
   }
   skillData = [
     {
       title: "Technical Skills",
-      icon: "../../assets/images/skill.png",
+      icon: "../../assets/images/skills/tech-skills.png",
       skillsList: [
         {
           name: "JavaScript, PHP",
@@ -40,7 +46,7 @@ export class SkillsComponent {
     },
     {
       title: "Frontend Development",
-      icon: "../../assets/images/idea.png",
+      icon: "../../assets/images/skills/frontend-dev.png",
       skillsList: [
         {
           name: "HTML5, CSS3",
@@ -61,7 +67,7 @@ export class SkillsComponent {
     },
     {
       title: "Backend Development",
-      icon: "../../assets/images/backend-coding.png",
+      icon: "../../assets/images/skills/backend-dev.png",
       skillsList: [
         {
           name: "API Development",
@@ -82,7 +88,7 @@ export class SkillsComponent {
     },
     {
       title: "Databases & Management",
-      icon: "../../assets/images/database-storage.png",
+      icon: "../../assets/images/skills/db-management.png",
       skillsList: [
         {
           name: "MySQL, MongoDB",
@@ -98,7 +104,7 @@ export class SkillsComponent {
     },
     {
       title: "DevOps & Deployment",
-      icon: "../../assets/images/agile.png",
+      icon: "../../assets/images/skills/dev-ops.png",
       skillsList: [
         {
           name: "CI/CD, Docker",
@@ -114,7 +120,7 @@ export class SkillsComponent {
     },
     {
       title: "Project Management",
-      icon: "../../assets/images/project-management.png",
+      icon: "../../assets/images/skills/project-management.png",
       skillsList: [
         {
           name: "Agile, Kanban",

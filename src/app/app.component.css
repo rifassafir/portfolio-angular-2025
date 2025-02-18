@@ -1,0 +1,13 @@
+/* Custom progress bar animation */
+@keyframes progress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.fixed.top-0.left-0.w-full.h-1.bg-blue-500 {
+  animation: progress 1s linear infinite;
+}

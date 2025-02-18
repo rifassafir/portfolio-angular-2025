@@ -1,3 +1,39 @@
 .title-icon{
   font-size: 35px;
 }
+
+@import url(https://fonts.bunny.net/css?family=merriweather-sans:300,400,800);
+
+body {
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+.shape {
+  animation: blob 7s infinite;
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+
+  100% {
+    transform: tranlate(0px, 0px) scale(1);
+  }
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}

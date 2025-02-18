@@ -47,3 +47,29 @@
     #ffffff 20px
   );
 }
+/* Thin scrollbar */
+::-webkit-scrollbar {
+  width: 2px; /* Adjust the width */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track color */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Scrollbar color */
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Hover effect */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width:none;
+  scrollbar-color: #888 #f1f1f1;
+}
+.radial-bg {
+  background: radial-gradient(circle, #1a0859, #090c12);
+}

@@ -1,0 +1,25 @@
+.card{
+  width: 80%;
+}
+
+.bg-white {
+  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+.shadow-lg {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.border-l-4 {
+  position: relative;
+}
+
+.border-l-4::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -4px;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #ce5e5e, #fc2525);
+}

@@ -7,5 +7,6 @@ export const environment = {
     storageBucket: "saf-app-824a4.firebasestorage.app",
     messagingSenderId: "768146065392",
     appId: "1:768146065392:web:d4f33730b577e77b4bff35",
+    // vapidKey: "rdrUfd6_eEGOwG4ewsoJmCYZeTjQ2Kal5wJzgFyeY4k",
   },
 };

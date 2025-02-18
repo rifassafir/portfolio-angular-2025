@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Inject, PLATFORM_ID  } from '@angular/core';
 import { DataService } from '../data.service';
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+
 @Component({
   selector: 'app-about',
   standalone: true,
@@ -10,12 +11,17 @@ import { CommonModule } from '@angular/common';
 })
 export class AboutComponent {
   aboutData: any;
+  isBrowser: boolean;
 
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService, @Inject(PLATFORM_ID) private platformId: object) {
+    this.isBrowser = isPlatformBrowser(platformId);
+  }
 
   ngOnInit(): void {
-    this.dataService.getAboutData().subscribe((data) => {
-      this.aboutData = data;
-    });
+    if (this.isBrowser) {
+      this.dataService.getAboutData().subscribe((data) => {
+        this.aboutData = data;
+      });
+    }
   }
 }

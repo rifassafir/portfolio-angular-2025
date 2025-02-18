@@ -1,31 +1,45 @@
-<section id="skills" class="flex py-10 font-light">
-  <div class="container mx-auto">
-    <h2 class="text-3xl font-bold"><span class="text-red-400">/</span> Skills</h2>
-    <h5 class="text-sm font-bold mb-6"><span class="text-red-400">#</span> List-of-key-skills</h5>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Loop through skillData array -->
-      <div *ngFor="let skill of skillsDataList"
-        class="relative border border-gray-200 group bg-transparent backdrop-blur-lg p-8 rounded-2xl shadow-xl flex flex-col items-center text-center transition-all duration-500 hover:scale-105 hover:shadow-purple-500/30 overflow-hidden">
-        <div
-          class="absolute inset-0 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 opacity-0 transition-opacity duration-500 group-hover:opacity-20">
-        </div>
-        <img [src]="skill.icon" alt="Skill Icon"
-          class="w-20 h-20 mb-4 transition-transform duration-500 group-hover:rotate-12 group-hover:scale-110 drop-shadow-lg">
-        <h3 class="text-2xl font-bold mb-3 transition-colors duration-500 group-hover:text-purple-400">{{ skill.title }}</h3>
-        <ul class="space-y-3 text-left">
-          <!-- Loop through skillsList array -->
-          <li *ngFor="let item of skill.skillsList" class="flex items-center transition-all duration-300 hover:text-yellow-400">
-            <i [class]="item.iconClass + ' ' + item.iconColor + ' mr-3'"></i>
-            {{ item.name }}
-          </li>
-        </ul>
-      </div>
+<section id="skills"
+    class="relative flex py-10 font-light bg-gradient-to-bl from-red-200 via-blue-200 to-red-200 text-black overflow-hidden">
+    <!-- Dotted Pattern Overlay -->
+    <div
+        class="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.20)_1px,transparent_1px)] [background-size:15px_15px] opacity-30">
     </div>
-  </div>
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold"><span class="text-red-400">/</span>Skills & Technologies</h2>
+        <h5 class="text-sm font-bold mb-6"><span class="text-red-400">#</span>  collection of my core skills and specialties</h5>
+
+        <div class="relative">
+            <div
+                class="shape bg-pink-400 absolute top-0 -left-4 w-100 h-100 rounded-full filter blur-xl opacity-70 mix-blend-multiply blob">
+            </div>
+            <div
+                class="shape bg-yellow-400 absolute top-0 -right-4 w-100 h-100 rounded-full filter blur-xl opacity-70 mix-blend-multiply blob animation-delay-2000">
+            </div>
+            <div
+                class="shape bg-violet-400 absolute -bottom-8 left-20 w-100 h-100 rounded-full filter blur-xl opacity-70 mix-blend-multiply blob animation-delay-4000">
+            </div>
+            <div
+                class="shape bg-rose-400 absolute -top-50 left-150 w-70 h-70 rounded-full filter blur-xl opacity-70 mix-blend-multiply blob animation-delay-4000">
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Loop through skillData array -->
+                <div *ngFor="let skill of skillsDataList"
+                    class="relative rounded p-10 px-20 group bg-white backdrop-blur-lg shadow-xl flex flex-col items-center text-center fill-transparent transition-all duration-500 overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 opacity-0 transition-opacity duration-500 group-hover:opacity-20">
+                    </div>
+                    <img [src]="skill.icon" alt="Skill Icon"
+                        class="w-12 h-12 mb-4 transition-transform duration-500 group-hover:rotate-12 group-hover:scale-105 drop-shadow-lg">
+                    <h3 class="text-2xl font-bold mb-3 transition-colors duration-500 group-hover:text-purple-400">{{ skill.title }}</h3>
+                    <ul class="text-left">
+                        <!-- Loop through skillsList array -->
+                        <li *ngFor="let item of skill.skillsList" class="flex font-light  items-center transition-all duration-300 hover:text-yellow-400">
+                            <i [class]="item.iconClass + ' ' + item.iconColor + ' mr-3'"></i>
+                            {{ item.name }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
-<!-- <button
-  class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 transition-all duration-200"
-  (click)="addSkill()"
->
-  Add Skill
-</button> -->

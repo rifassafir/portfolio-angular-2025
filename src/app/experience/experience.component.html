@@ -1,1 +1,29 @@
-<p>experience works!</p>
+<section id="experience" class="relative flex py-10 font-light bg-gradient-to-bl from-red-900 via-purple-600 to-orange-500 text-white overflow-hidden">
+  <!-- Dotted Pattern Overlay -->
+  <div class="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.20)_1px,transparent_1px)] [background-size:15px_15px] opacity-30"></div>
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold"><span class="text-red-400">/</span> Experience</h2>
+        <h5 class="text-sm font-bold mb-6"><span class="text-red-400">#</span>  Roles, achievements, and skills I’ve gained over the years</h5>
+
+        <div class="justify-center flex">
+          <div class="card relative border-l-6 border-dashed border-neutral-400 ml-5">
+            <div *ngFor="let exp of experiences;" class="mb-10 ml-8">
+                <!-- Dot -->
+                <div
+                    class="absolute -left-8.5 w-15 h-15 bg-red-400 border-neutral-400 rounded-full border-6 flex items-center justify-center shadow-md">
+                    <span class="text-white font-bold">{{ exp.year }}</span>
+                </div>
+
+                <!-- Card -->
+                <div class="bg-white ml-10 p-6 rounded-lg shadow-lg transform transition duration-500 hover:scale-102">
+                    <h3 class="text-xl font-semibold text-gray-700">{{ exp.company }}</h3>
+                    <p class="text-sm text-gray-500">{{ exp.role }} | {{ exp.date }}</p>
+                    <div class="mt-2 text-gray-600">
+                      <p *ngFor="let desc of exp.description">{{ desc }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
