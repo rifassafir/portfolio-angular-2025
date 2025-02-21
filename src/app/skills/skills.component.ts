@@ -12,6 +12,7 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 export class SkillsComponent {
   isBrowser: boolean;
   skillsDataList: any;
+  filteredSkillsDataList: any;
   constructor(private firestoreService: DataService, @Inject(PLATFORM_ID) private platformId: object) {
     this.isBrowser = isPlatformBrowser(platformId);
   }
@@ -19,9 +20,45 @@ export class SkillsComponent {
     if (this.isBrowser) {
       this.firestoreService.getSkillsData().subscribe((data) => {
         this.skillsDataList = data[0].skillList;
+        this.filteredSkillsDataList = this.skillsDataList.map((skill: any) => ({
+          title: skill.title,
+          skillSet: skill.skillsList.map((s: any) => s.name)
+        }));
       });
     }
   }
+  formatJsonWithLineNumbers(json: any): string {
+    if (json === undefined || json === null) {
+        return '<span class="error">Invalid JSON: Value is null or undefined</span>';
+    }
+
+    let jsonString: string;
+    try {
+        jsonString = JSON.stringify(json, null, 2);
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+        return `<span class="error">Error formatting JSON: ${errorMessage}</span>`;
+    }
+
+    const lines = jsonString.split('\n');
+    return lines.map((line, index) => {
+        const lineNumber = `<span class="line-number">${index + 1}</span>`;
+        const formattedLine = line.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+            .replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, (match) => {
+                let cls = 'json-number';
+                if (/^"/.test(match)) {
+                    cls = /:$/.test(match) ? 'json-key' : 'json-string';
+                } else if (/true|false/.test(match)) {
+                    cls = 'json-boolean';
+                } else if (/null/.test(match)) {
+                    cls = 'json-null';
+                }
+                return `<span class="${cls}">${match}</span>`;
+            });
+        return `${lineNumber} ${formattedLine}`;
+    }).join('\n');
+}
+
   skillData = [
     {
       title: "Technical Skills",

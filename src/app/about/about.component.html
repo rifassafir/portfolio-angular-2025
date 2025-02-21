@@ -1,50 +1,49 @@
-<section id="about" class="mt-15 relative overflow-hidden bg-gradient-to-br from-orange-200 via-rose-100 to-purple-100 ">
-  <div class="flex flex-col md:flex-row justify-between gap-45 max-w-screen-xl mx-auto py-10 ">
-    <div class=" flex-shrink-0 w-60 h-60 md:w-80 md:h-80 py-4 ">
-            <img src="../../assets/profile/5cc.png" alt="Safir Sainudeen"
-                class="relative mt-42 w-120 rounded-lg scale-220 transform z-30">
-            <div class="relative bottom-50 right-60 z-20 w-150 h-150  border-10 border-dashed border-red-300 rounded-full"></div>
-            <div class="relative bottom-260 right-80 z-20 w-60 h-60  border-8 border-dashed border-orange-300 rounded-full"></div>
-            <div class="relative bottom-300  left-70 z-20 w-20 h-20  border-5 border-dashed border-gray-400 rounded-full"></div>
-            <div class="relative bottom-270 left-100 z-20 w-40 h-40  border-6 border-dashed border-red-200 rounded-full"></div>
-            <div class="relative bg-amber-700">
-              <div class="absolute bottom-25 left-250 w-64 h-32 bg-[radial-gradient(circle_at_center,#000_10%,transparent_10%)] bg-[length:20px_15px]"></div>
-            </div>
-        </div>
-        <div class="flex-grow w-full md:w-3/5 text-center md:text-left">
-            <h4 class="font-bold text-3xl"> Hello, I'm</h4>
-            <h1 class="font-bold text-5xl sm:text-6xl text-gray-800 mb-6 leading-tight">
-                <span class="text-rose-400 text-8xl sm:text-8xl">Safir
-                  <span class="text-gray-700">Sainudeen</span><span>
-                    <span class="ml-1 inline-block w-4 h-4 bg-red-400 rounded-full"></span>
-                  </span>
-                </span>
-            </h1>
-
-            <div *ngFor="let item of aboutData" class="mb-8">
-                <h2 class="text-3xl font-bold my-4 fade-in typing-effect text-pink-800">{{ item.title }}</h2>
-                <p class="text-gray-700 leading-relaxed font-light text-lg" [innerHTML]="item.description"></p>
-            </div>
-            <div class="mt-12 flex flex-col md:flex-row justify-between gap-10">
-                <div>
-                    <h3 class="text-2xl font-bold text-red-400 mb-4">Find me on</h3>
-                    <div class="flex gap-6 text-2xl">
-                        <a href="#" class="social-icon shadow-lg p-3 rounded-full"><i class="fa fa-facebook"></i></a>
-                        <a href="#" class="social-icon shadow-lg p-3 rounded-full"><i class="fa fa-linkedin"></i></a>
-                        <a href="#" class="social-icon shadow-lg p-3 rounded-full"><i class="fa fa-twitter"></i></a>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-2xl font-bold text-red-400 mb-4">Best Skills on</h3>
-                    <div class="flex gap-6 text-2xl">
-                        <a href="#" class="social-icon shadow-lg p-3 rounded-full"><i class="fa fa-html5"></i></a>
-                        <a href="#" class="social-icon shadow-lg p-3 rounded-full"><i class="fa fa-code"></i></a>
-                        <a href="#" class="social-icon shadow-lg p-3 rounded-full"><i class="fa fa-git"></i></a>
-                        <a href="#" class="social-icon shadow-lg p-3 rounded-full"><i class="fa fa-css3"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+<section id="about" class="mt-10  text-white bg-gradient-to-r from-[#1a172a] to-[#0f1a31] bg-cover bg-fixed bg-center border-1 border-[#224b5d]" >
+  <div class="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.20)_1px,transparent_1px)] [background-size:15px_15px] opacity-30"></div>
+  <div class="flex flex-col md:flex-row justify-between gap-12 max-w-screen-xl mx-auto mt-2">
+    <div class="flex-shrink-0 jus w-100 h-100 md:w-120 md:h-120 py-4 mt-14 bg-gray-800  bg-cover border-1 border-[#224b5d]" style="background-image: url('assets/profile/5cc.png'); background-position: 30%;" >
+      <!-- <div class="card rounded-3xl"  ></div> -->
+      <!-- <img src="../../assets/profile/5cc.png" alt="Safir Sainudeen" class="relative mt-10 w-60 md:w-80 rounded-lg transform z-30"> -->
     </div>
-</section>
+    <div class="relative flex-grow w-full md:w-3/5 text-center md:text-left border-l-1 border-[#224b5d] pl-4">
+      <svg class="absolute opacity-5 -top-30 right-20 w-500 h-500 text-purple-300" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+        <path fill="currentColor" d="M100,20 C120,20 140,40 140,60 C140,80 120,100 100,100 C80,100 60,80 60,60 C60,40 80,20 100,20 Z" />
+      </svg>
+      <svg class="absolute opacity-4 -top-50 right-40 w-500 h-500 text-purple-300" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+        <path fill="currentColor" d="M100,20 C120,20 140,40 140,60 C140,80 120,100 100,100 C80,100 60,80 60,60 C60,40 80,20 100,20 Z" />
+      </svg>
+      <h4 class="font-bold text-3xl pt-5">Hello, I'm</h4>
+      <h1 class="font-bold text-5xl sm:text-6xl text-gray-800  leading-tight">
+        <span class="text-rose-400 text-8xl sm:text-8xl">Safir
+          <span class="text-gray-300">Sainudeen</span><span>
+            <span class="ml-1 inline-block w-4 h-4 bg-white rounded-full"></span>
+          </span>
+        </span>
+      </h1>
 
+      <div *ngFor="let item of aboutData" class="mb-8 ">
+        <h2 class="text-3xl font-bold my-4 fade-in typing-effect text-rose-300"><span class="text-white"><</span> {{ item.title }} <span  class="text-white">/></span></h2>
+        <p class="text-gray-300 leading-relaxed font-regular " [innerHTML]="item.description"></p>
+      </div>
+      <!-- <div class="mt-12 flex flex-col md:flex-row justify-between gap-10">
+        <div>
+          <h3 class="text-2xl font-bold text-red-400 mb-4">Find me on</h3>
+          <div class="flex gap-6 text-2xl">
+            <a href="#" class="social-icon shadow-lg p-3 rounded-full"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="social-icon shadow-lg p-3 rounded-full"><i class="fa fa-linkedin"></i></a>
+            <a href="#" class="social-icon shadow-lg p-3 rounded-full"><i class="fa fa-twitter"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold text-red-400 mb-4">Best Skills on</h3>
+          <div class="flex gap-6 text-2xl">
+            <a href="#" class="social-icon shadow-lg p-3 rounded-full"><i class="fa fa-html5"></i></a>
+            <a href="#" class="social-icon shadow-lg p-3 rounded-full"><i class="fa fa-code"></i></a>
+            <a href="#" class="social-icon shadow-lg p-3 rounded-full"><i class="fa fa-git"></i></a>
+            <a href="#" class="social-icon shadow-lg p-3 rounded-full"><i class="fa fa-css3"></i></a>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</section>

@@ -1,3 +1,4 @@
 .menuLink.active{
-  color: #ffea00cc;
+  color: #fff;
+  border-bottom: 3px solid #fff;
 }

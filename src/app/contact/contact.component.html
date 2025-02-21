@@ -1,69 +1,56 @@
 <section id="contact"
-    class="flex py-10 pb-20 font-light bg-[radial-gradient(circle,rgba(0,0,0,0.1)_1px,transparent_1px)] [background-size:15px_15px]">
-    <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold"><span class="text-red-400">/</span> Let’s Connect</h2>
-        <h5 class="text-sm font-bold mb-6"><span class="text-red-400">#</span> Have a project or just want to say hi?
-            I’d love to chat!</h5>
+    class="flex py-8  font-light relative bg-gradient-to-r from-[#1a172a] to-[#0f1a31] text-white overflow-hidden border-x-1 border-b-1 border-[#224b5d]" >
+    <div class="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.20)_1px,transparent_1px)] [background-size:15px_15px] opacity-30"></div>
+    <div class="container mx-auto px-6 pb-8">
+        <div class="z-30">
+          <h2 class="text-6xl font-bold"><span class="text-red-400  mr-4">/</span>Let’s Connect</h2>
+          <h5 class="text-xl font-regular mb-6"><span class="text-red-400 mr-2">#</span>have-a-project-or-just-want-to-say-hi?
+              I’d-love-to-chat!</h5>
+        </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mt-10">
             <!-- Illustration -->
             <div class="relative hidden md:flex justify-center">
-                <img src="../../assets/resume-logo.jpg" alt="Contact Illustration"
-                    class="p-2 border-gray-300 border-8 z-3 rounded-full max-w-sm">
-                <svg class="absolute opacity-50 bottom-0 w-150 h-150 text-purple-300  animate-spin-slow"
-                    viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Irregular Circle Path -->
-                    <path fill="currentColor" d="M100,20
-                        C120,20 140,40 140,60
-                        C140,80 120,100 100,100
-                        C80,100 60,80 60,60
-                        C60,40 80,20 100,20
-                        Z" />
-                </svg>
-                <svg class="absolute opacity-50 bottom-5 w-150 h-150 text-rose-300 animate-spin-slow-2"
-                    viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Irregular Circle Path -->
-                    <path fill="currentColor" d="M100,20
-                        C120,20 140,40 140,60
-                        C140,80 120,100 100,100
-                        C80,100 60,80 60,60
-                        C60,40 80,20 100,20
-                        Z" />
-                </svg>
-                <svg class="absolute opacity-50 bottom-0 left-0 right-120 w-120 h-120 text-amber-200  animate-spin-slow"
-                    viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Irregular Circle Path -->
-                    <path fill="currentColor" d="M100,20
-                        C120,20 140,40 140,60
-                        C140,80 120,100 100,100
-                        C80,100 60,80 60,60
-                        C60,40 80,20 100,20
-                        Z" />
-                </svg>
+                <div>
+                    <div class="flex items-center gap-4 bg-gradient-to-r from-[#1a172a] to-[#0f1a31] px-5 py-5 rounded-4xl border-1 border-[#224b5d] shadow-2xl">
+                      <div class="gap-2">
+                        <img src="../../assets/resume-logo.jpg" alt="Contact Illustration"
+                        class="p-1 h-30 w-30 border-[#224b5d] border-2 z-3 rounded-full max-w-sm">
+                      </div>
+                      <div class="">
+                          <div class="font-bold text-xl text-blue-600">&#64;Safir Sainudeen</div>
+                          <div class="font-bold text-gray-500 hover:text-white">[ <i class="fa fa-phone"></i> Connect Me: +91-7591980170 ]</div>
+                          <div class="font-bold text-gray-500 hover:text-white">[ <i class="fa fa-envelope"></i> Primary Email: rifassafir&#64;gmail.com ] </div>
+                          <div class="font-bold text-gray-500 hover:text-white">[ <i class="fa fa-envelope"></i> Secondary Email: safirsainudeen&#64;gmail.com ]</div>
+                      </div>
+                    </div>
+                </div>
+
+
+
 
             </div>
 
             <!-- Contact Form -->
-            <div class="bg-white p-6 rounded-lg shadow-2xl max-w-lg w-full z-3">
-                <!-- <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Contact Us</h2> -->
+            <div class="bg-gradient-to-r from-[#1a172a] to-[#0f1a31] opacity-80 p-6 shadow-2xl max-w-lg w-full z-3 border-1 border-[#224b5d] " >
                 <form (ngSubmit)="onSubmit()" class="space-y-6">
                     <!-- Name Input -->
                     <div>
-                        <label for="name" class="block text-sm font-bold text-gray-700">Name</label>
+                        <label for="name" class="block text-sm font-bold text-white">Name</label>
                         <input [(ngModel)]="formData.name" name="name" id="name" placeholder="Enter your name"
                             class="w-full p-3 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all" />
                     </div>
 
                     <!-- Email Input -->
                     <div>
-                        <label for="email" class="block text-sm font-bold text-gray-700">Email</label>
+                        <label for="email" class="block text-sm font-bold text-white">Email</label>
                         <input [(ngModel)]="formData.email" name="email" id="email" placeholder="Enter your email"
                             class="w-full p-3 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all" />
                     </div>
 
                     <!-- Message Textarea -->
                     <div>
-                        <label for="message" class="block text-sm font-bold text-gray-700">Message</label>
+                        <label for="message" class="block text-sm font-bold text-white">Message</label>
                         <textarea [(ngModel)]="formData.message" name="message" id="message"
                             placeholder="Enter your message" rows="4"
                             class="w-full p-3 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"></textarea>
@@ -71,9 +58,9 @@
 
                     <!-- Submit Button -->
                     <button type="submit" [disabled]="loading"
-                        class="w-full bg-blue-600 text-white p-3 rounded-lg flex justify-center items-center gap-2 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all">
+                        class="w-full bg-blue-600 text-white font-regular p-3 rounded-lg flex justify-center items-center gap-2 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all">
                         <span *ngIf="loading"
-                            class="animate-spin border-4 border-white border-t-transparent rounded-full w-5 h-5"></span>
+                            class="animate-spin  border-4 border-white border-t-transparent rounded-full w-5 h-5"></span>
                         {{ loading ? 'Submitting...' : 'Submit' }}
                     </button>
                 </form>

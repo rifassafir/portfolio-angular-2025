@@ -1,43 +1,35 @@
-<nav class="bg-gradient-to-r from-[#170b4d] to-[#090c12] text-white  p-4 shadow-lg fixed top-0 left-0 w-full z-50">
-  <div class="container mx-auto flex justify-between items-center">
-      <!-- Logo -->
-      <div class="flex items-center gap-2">
-          <a routerLink="/" class="text-white text-lg font-bold tracking-wide">Portfolio</a>
-      </div>
+<nav class="bg-gradient-to-r border-t-0 from-[#1a172a] to-[#0f1a31] text-white fixed top-0 left-0 w-full z-50 border-1 border-[#224b5d]">
+  <div class="mx-auto flex justify-between items-center">
+    <!-- Logo -->
+    <div class="flex items-center ">
+      <a routerLink="/" class="text-white text-lg font-bold tracking-wide  cursor-pointer  hover:text-white transition duration-300 px-5 py-3 border-r-1 border-[#224b5d]">Portfolio</a>
+    </div>
 
-      <!-- Navigation Links for Web -->
-      <div class="hidden md:flex gap-5">
-          <a (click)="smoothScroll('about', 80)"
-              class="menuLink cursor-pointer text-white font-bold hover:text-gray-200 transition duration-300"
-              [ngClass]="{'active': selectedMenu === 'about'}">About</a>
-          <a (click)="smoothScroll('skills', 40)"
-              class="menuLink cursor-pointer text-white font-bold hover:text-gray-200 transition duration-300"
-              [ngClass]="{'active': selectedMenu === 'skills'}">Skills</a>
-          <a (click)="smoothScroll('work', 40)"
-              class="menuLink cursor-pointer text-white font-bold hover:text-gray-200 transition duration-300"
-              [ngClass]="{'active': selectedMenu === 'work'}">Work</a>
-          <a (click)="smoothScroll('experience', 40)"
-              class="menuLink cursor-pointer text-white font-bold hover:text-gray-200 transition duration-300"
-              [ngClass]="{'active': selectedMenu === 'experience'}">Experience</a>
-          <a (click)="smoothScroll('contact', 40)"
-              class="menuLink cursor-pointer text-white font-bold hover:text-gray-200 transition duration-300"
-              [ngClass]="{'active': selectedMenu === 'contact'}">Contact</a>
-      </div>
+    <!-- Navigation Links for Web -->
+    <div class="hidden md:flex border-r-1 border-[#224b5d]">
+      <a *ngFor="let menu of menus" (click)="smoothScroll(menu.id, menu.offset)"
+        class="menuLink cursor-pointer text-gray-400 font-regular hover:text-white transition duration-300 px-5 py-3 border-l-1 border-[#224b5d]"
+        [ngClass]="{'active': selectedMenu === menu.id}">{{ menu.label }}</a>
+    </div>
 
-      <!-- Mobile Menu Button -->
-      <button (click)="toggleMenu()" class="md:hidden text-white text-2xl focus:outline-none">
-        <i [ngClass]="isMenuOpen ? 'font-light fa fa-times' : 'fa fa-bars'"></i>
-      </button>
+    <div class="hidden md:flex">
+      <a (click)="smoothScroll('contact', 40); closeMenu()"
+        class="menuLink cursor-pointer text-gray-400 font-regular hover:text-white transition duration-300 px-5 py-3 border-l-1 border-[#224b5d]" [ngClass]="{'active': selectedMenu === 'contact'}">_contact-me</a>
+    </div>
+    <!-- Mobile Menu Button -->
+    <button (click)="toggleMenu()" class="md:hidden text-white text-2xl focus:outline-none">
+      <i [ngClass]="isMenuOpen ? 'font-light fa fa-times' : 'fa fa-bars'"></i>
+    </button>
   </div>
 
   <!-- Mobile Navigation Menu -->
   <div [ngClass]="{'max-h-0 overflow-hidden opacity-0': !isMenuOpen, 'max-h-96 opacity-100': isMenuOpen}"
-      class="md:hidden bg-purple-600 text-white flex flex-col gap-4 p-4 absolute top-full left-0 w-full shadow-md transition-all duration-500 ease-in-out">
-      <a (click)="smoothScroll('about', 80); closeMenu()" class="menuLink" [ngClass]="{'active': selectedMenu === 'about'}">About</a>
-      <a (click)="smoothScroll('skills', 40); closeMenu()" class="menuLink" [ngClass]="{'active': selectedMenu === 'skills'}">Skills</a>
-      <a (click)="smoothScroll('work', 40); closeMenu()" class="menuLink" [ngClass]="{'active': selectedMenu === 'work'}">Work</a>
-      <a (click)="smoothScroll('experience', 40); closeMenu()" class="menuLink" [ngClass]="{'active': selectedMenu === 'experience'}">Experience</a>
-      <a (click)="smoothScroll('contact', 40); closeMenu()" class="menuLink" [ngClass]="{'active': selectedMenu === 'contact'}">Contact</a>
+    class="md:hidden bg-purple-600 text-white flex flex-col gap-4 p-4 absolute top-full left-0 w-full shadow-md transition-all duration-500 ease-in-out">
+    <a *ngFor="let menu of menus" (click)="smoothScroll(menu.id, menu.offset); closeMenu()"
+      class="menuLink" [ngClass]="{'active': selectedMenu === menu.id}">{{ menu.label }}</a>
   </div>
-
+  <div [ngClass]="{'max-h-0 overflow-hidden opacity-0': !isMenuOpen, 'max-h-96 opacity-100': isMenuOpen}">
+    <a (click)="smoothScroll('contact', 40); closeMenu()"
+      class="menuLink" [ngClass]="{'active': selectedMenu === 'contact'}">_contact</a>
+  </div>
 </nav>

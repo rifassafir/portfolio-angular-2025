@@ -1,38 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'Raleway-Regular';
-  src: url('/assets/fonts/Raleway-Regular.ttf') format('truetype');
+  font-family: 'Fira Code';
+  src: url('https://fonts.gstatic.com/s/firacode/v11/uU9MCBoQ4YO3pXID7lU5h3g.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Raleway';
-  src: url('/assets/fonts/Raleway-Bold.ttf') format('truetype');
+  font-family: 'Fira Code';
+  src: url('https://fonts.gstatic.com/s/firacode/v11/uU9MCBoQ4YO3pXID7lU5h3g.woff2') format('woff2');
   font-weight: 700; /* Bold */
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Raleway';
-  src: url('/assets/fonts/Raleway-Italic.ttf') format('truetype');
+  font-family: 'Fira Code';
+  src: url('https://fonts.gstatic.com/s/firacode/v11/uU9MCBoQ4YO3pXID7lU5h3g.woff2') format('woff2');
   font-weight: 400;
   font-style: italic; /* Italic */
 }
 
-
 .font-regular {
-  font-family: 'Raleway-Regular', sans-serif;
+  font-family: 'Fira Code', monospace;
 }
 
 .font-bold {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Fira Code', monospace;
   font-weight: 700;
 }
 
 .font-italic {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Fira Code', monospace;
   font-style: italic;
 }
 
@@ -47,6 +47,7 @@
     #ffffff 20px
   );
 }
+
 /* Thin scrollbar */
 ::-webkit-scrollbar {
   width: 2px; /* Adjust the width */
@@ -67,9 +68,57 @@
 
 /* For Firefox */
 * {
-  scrollbar-width:none;
+  scrollbar-width: none;
   scrollbar-color: #888 #f1f1f1;
 }
+
 .radial-bg {
   background: radial-gradient(circle, #1a0859, #090c12);
 }
+
+
+.json-viewer {
+  /* white-space: pre-wrap;
+  word-wrap: break-word; */
+  position: relative;
+  padding-left: 3rem; /* Space for line numbers */
+}
+
+.json-viewer .json-key {
+  color: #ec79af; /* Pink */
+}
+
+.json-viewer .json-value {
+  color: #c4e5cd; /* Green */
+}
+
+.json-viewer .json-string {
+  color: hsl(42, 73%, 71%); /* Yellow */
+}
+
+.json-viewer .json-number {
+  color: #2f2cf5; /* Purple */
+}
+
+.json-viewer .json-boolean {
+  color: #ffb86c; /* Orange */
+}
+
+.json-viewer .json-null {
+  color: #8be9fd; /* Cyan */
+}
+
+.json-viewer .json-bracket {
+  color: #6272a4; /* Blue */
+}
+
+.json-viewer .line-number {
+  position: absolute;
+  left: 0;
+  width: 2rem;
+  text-align: right;
+  color: #6272a4; /* Line number color */
+  user-select: none;
+  pointer-events: none;
+}
+

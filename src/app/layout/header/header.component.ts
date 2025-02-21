@@ -5,12 +5,19 @@ import { RouterModule } from '@angular/router';
   selector: 'app-header',
   imports: [CommonModule,RouterModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrls: ['./header.component.css']
 })
 
 export class HeaderComponent {
   selectedMenu   = 'about';
   isMenuOpen = false;
+  menus = [
+    { id: 'about', label: '_about-me', offset: 80 },
+    { id: 'skills', label: '_skills', offset: 40 },
+    { id: 'work', label: '_my-work', offset: 40 },
+    { id: 'experience', label: '_experience', offset: 40 },
+    // { id: 'contact', label: '_contact', offset: 40 }
+  ];
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
     smoothScroll(targetId: string, offset: number = 0) {
@@ -18,7 +25,7 @@ export class HeaderComponent {
         const targetElement = document.getElementById(targetId);
         if (targetElement) {
           this.selectedMenu = targetId
-          console.log(this.selectedMenu)
+          // console.log(this.selectedMenu)
           const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
           const startPosition = window.pageYOffset;
           const distance = targetPosition - startPosition;

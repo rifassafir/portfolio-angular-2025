@@ -17,7 +17,7 @@
     width: 0;
   }
   to {
-    width:60%; /* Set to 100% to allow full text to appear */
+    width:64%; /* Set to 100% to allow full text to appear */
   }
 }
 
