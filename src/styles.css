@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
 @import "tailwindcss";
 
+
+
+
 @font-face {
   font-family: 'Fira Code';
   src: url('https://fonts.gstatic.com/s/firacode/v11/uU9MCBoQ4YO3pXID7lU5h3g.woff2') format('woff2');
@@ -122,3 +125,43 @@
   pointer-events: none;
 }
 
+.box:hover {
+  color: white;
+  --border-angle: 0turn; /* For animation */
+  --main-bg: conic-gradient(
+    from var(--border-angle),
+    #213,
+    #112 5%,
+    #112 60%,
+    #213 95%
+  );
+
+  border: solid 1px transparent;
+  border-radius: 10px;
+  --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #08f, #f03 99%, transparent);
+
+  background:
+    var(--main-bg) padding-box,
+    var(--gradient-border) border-box,
+    var(--main-bg) border-box;
+
+  animation: bg-spin 5s linear infinite;
+}
+
+@keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+
+.box {
+  margin-left: 60px;
+  cursor: pointer;
+  animation-play-state: paused;
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}

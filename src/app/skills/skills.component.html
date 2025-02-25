@@ -1,37 +1,200 @@
-
 <section id="skills"
     class="relative flex py-8 font-light bg-gradient-to-r from-[#1a172a] to-[#0f1a31] text-white overflow-hidden border-x-1 border-b-1 border-[#224b5d]">
     <!-- Dotted Pattern Overlay -->
-    <div class="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.20)_1px,transparent_1px)] [background-size:15px_15px] opacity-30"></div>
+    <div
+        class="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.20)_1px,transparent_1px)] [background-size:15px_15px] opacity-30">
+    </div>
 
     <div class="container mx-auto">
-      <h2 class="text-6xl font-bold"><span class="text-red-400  mr-4">/</span>Skills & Technologies</h2>
-      <h5 class="text-xl font-regular mb-6 "><span class="text-red-400 mr-1">#</span>collection-of-my-core-skills-and-specialties</h5>
+        <h2 class="text-6xl font-bold"><span class="text-red-400  mr-4">/</span>Skills & Technologies</h2>
+        <h5 class="text-xl font-regular mb-6 "><span
+                class="text-red-400 mr-1">#</span>collection-of-my-core-skills-and-specialties</h5>
 
         <div class="flex justify-between items-center">
-          <div class="grid">
-            <img src="../../assets/images/web-dev.gif" class="p-2 z-5 opacity-60 w-150 mb-10 border border-gray-600 hover:glow-border" alt="">
-            <img src="../../assets/images/web-dev-2d.gif" class="p-2 ml-75 w-150 h-80 mb-10 bg-[#1e1842] opacity-60 border border-gray-600 hover:glow-border" alt="">
-            <img src="../../assets/images/web-development.gif" class="p-2 w-150 h-80 bg-[#1e1842] opacity-70 border border-gray-600 hover:glow-border" alt="">
-         </div>
-            <div class="relative">
-              <div
-                  class="shape bg-pink-400 absolute top-0 -left-4 w-100 h-100 rounded-full filter blur-xl opacity-70 mix-blend-multiply blob">
-              </div>
-              <div
-                  class="shape bg-yellow-400 absolute top-0 -right-4 w-100 h-100 rounded-full filter blur-xl opacity-70 mix-blend-multiply blob animation-delay-2000">
-              </div>
-              <div
-                  class="shape bg-violet-400 absolute -bottom-8 left-20 w-100 h-100 rounded-full filter blur-xl opacity-70 mix-blend-multiply blob animation-delay-4000">
-              </div>
-              <div
-                  class="shape bg-rose-400 absolute -top-50 left-150 w-70 h-70 rounded-full filter blur-xl opacity-70 mix-blend-multiply blob animation-delay-4000">
-              </div>
+            <div>
+                <div class="border-1 border-[#224b5d] mr-5 bg-gray-900 ">
+                    <div class="font-regular w-full grid-1 border-b-1 border-[#224b5d]">
+                        <div class="flex justify-between items-center">
+                            <h6 class="font-regular text-[12px]   px-2 border-r-1 border-[#224b5d]">Technologies to: </h6>
+                            <span class="font-regular px-2 border-l-1 border-[#224b5d]">X</span>
+                        </div>
+                    </div> <br/>
+                    <div class="grid grid-cols-2 md:grid-cols-2 gap-10 items-center p-5  pt-0 text-[10px]">
+                        <div class="pt-0  shadow-2xl ">
+                            <div class="flex justify-between items-center border-1 border-[#224b5d]">
+                                <h6 class="font-regular px-2 border-r-1 border-[#224b5d]">IOT Application [NFC,QRCode] </h6>
+                                <span class="font-regular px-2 border-l-1 border-[#224b5d]">X</span>
+                            </div>
+                            <div class="p-2 border-1 border-t-0 border-[#224b5d]">
+                                <img class="h-50 w-100" src="../../assets/images/iot.gif" alt="">
+                            </div>
+                        </div>
 
-              <div class="grid ">
-                <pre class="json-viewer bg-gray-900 text-green-400 p-4 rounded-2xl opacity-85 w-150 border border-gray-700 hover:glow-border" [innerHTML]="formatJsonWithLineNumbers(filteredSkillsDataList)"></pre>
-              </div>
-          </div>
+
+                        <div class="pt-0 shadow-2xl">
+                          <div class="flex justify-between items-center border-1 border-[#224b5d]">
+                              <h6 class="font-regular px-2 border-r-1 border-[#224b5d]">E-Commerce Application </h6>
+                              <span class="font-regular px-2 border-l-1 border-[#224b5d]">X</span>
+                          </div>
+                          <div class="p-2 border-1 border-t-0 border-[#224b5d]">
+                              <img class="h-50 w-100" src="../../assets/images/e-commerce.gif" alt="">
+                          </div>
+                        </div>
+                        <div class="pt-0 shadow-2xl">
+                            <div class="flex justify-between items-center border-1 border-[#224b5d]">
+                                <h6 class="font-regular px-2 border-r-1 border-[#224b5d]">Inventory Application </h6>
+                                <span class="font-regular px-2 border-l-1 border-[#224b5d]">X</span>
+                            </div>
+                            <div class="p-2 border-1 border-t-0 border-[#224b5d]">
+                                <img class="h-50 w-100" src="../../assets/images/inventory.gif" alt="">
+                            </div>
+                        </div>
+
+                        <div class="pt-0 shadow-2xl">
+                          <div class="flex justify-between items-center border-1 border-[#224b5d]">
+                              <h6 class="font-regular px-2 border-r-1 border-[#224b5d]">Websites </h6>
+                              <span class="font-regular px-2 border-l-1 border-[#224b5d]">X</span>
+                          </div>
+                          <div class="p-2 border-1 border-t-0 border-[#224b5d]">
+                              <img class="h-50 w-100 bg-cover bg-" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/5de8f9209526051.67010af0e128f.gif" alt="">
+                          </div>
+                        </div>
+                    </div>
+                    <div class="font-bold text-gray-600 text-[12px] ml-5 mb-2 ">[...see more]</div>
+                </div>
+
+
+                <div class="border-1 border-[#224b5d] mr-5 mt-30 bg-gray-900">
+                    <div class="font-regular w-full grid-1 border-b-1 border-[#224b5d]">
+                        <div class="flex justify-between items-center">
+                            <h6 class="font-regular text-[12px]   px-2 border-r-1 border-[#224b5d]">[Languages, Frameworks, Technologies...] </h6>
+                            <span class="font-regular px-2 border-l-1 border-[#224b5d]">X</span>
+                        </div>
+                    </div> <br/>
+                    <div class="grid grid-cols-5 md:grid-cols-5 gap-10 items-center p-5  pt-0 text-[10px]">
+
+                        <div class="pt-0  shadow-2xl hover:skew-x-6 ">
+                          <div class="flex justify-between items-center border-1 border-[#224b5d]">
+                              <h6 class="font-regular px-2 border-r-1 border-[#224b5d]">PHP</h6>
+                              <span class="font-regular px-2 border-l-1 border-[#224b5d]">X</span>
+                          </div>
+                          <div class="p-2 border-1 border-t-0 border-[#224b5d]">
+                              <img class="h-32 bg-[#525eb6]" src="../../assets/images/php.svg" alt="">
+                          </div>
+                        </div>
+
+                        <div class="pt-0  shadow-2xl hover:skew-x-6 ">
+                            <div class="flex justify-between items-center border-1 border-[#224b5d]">
+                                <h6 class="font-regular px-2 border-r-1 border-[#224b5d]">Laravel</h6>
+                                <span class="font-regular px-2 border-l-1 border-[#224b5d]">X</span>
+                            </div>
+                            <div class="p-2 border-1 border-t-0 border-[#224b5d]">
+                                <img class="h-32" src="../../assets/images/laravel.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="pt-0 shadow-2xl hover:skew-x-6">
+                            <div class="flex justify-between items-center border-1 border-[#224b5d]">
+                                <h6 class="font-regular px-2 border-r-1 border-[#224b5d]">Angular </h6>
+                                <span class="font-regular px-2 border-l-1 border-[#224b5d]">X</span>
+                            </div>
+                            <div class="p-2 border-1 border-t-0 border-[#224b5d]">
+                                <img class="h-32" src="../../assets/images/angular.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="pt-0 shadow-2xl  hover:skew-x-6 transition-transform duration-300">
+                            <div class="flex justify-between items-center border-1 border-[#224b5d]">
+                                <h6 class="font-regular px-2 border-r-1 border-[#224b5d]">ReactJs </h6>
+                                <span class="font-regular px-2 border-l-1 border-[#224b5d]">X</span>
+                            </div>
+                            <div class="p-2 border-1 border-t-0 border-[#224b5d]">
+                                <img class="h-32" src="../../assets/images/react.png" alt="">
+                            </div>
+                        </div>
+
+
+                        <div class="pt-0 shadow-2xl  hover:skew-x-6 transition-transform duration-300">
+                            <div class="flex justify-between items-center border-1 border-[#224b5d]">
+                                <h6 class="font-regular px-2 border-r-1 border-[#224b5d]">Tailwind Css </h6>
+                                <span class="font-regular px-2 border-l-1 border-[#224b5d]">X</span>
+                            </div>
+                            <div class="p-2 border-1 border-t-0 border-[#224b5d]">
+                                <img class="h-32" src="../../assets/images/tailwind.png" alt="">
+                            </div>
+                        </div>
+
+
+                        <div class="pt-0 shadow-2xl  hover:skew-x-6 transition-transform duration-300">
+                          <div class="flex justify-between items-center border-1 border-[#224b5d]">
+                              <h6 class="font-regular px-2 border-r-1 border-[#224b5d]">Database(s) </h6>
+                              <span class="font-regular px-2 border-l-1 border-[#224b5d]">X</span>
+                          </div>
+                          <div class="p-2 border-1 border-t-0 border-[#224b5d]">
+                              <img class="h-32 bg-white bg-cover" src="../../assets/images/mongo-mysql.webp" alt="">
+                          </div>
+                      </div>
+                      <div class="pt-0 shadow-2xl  hover:skew-x-6 transition-transform duration-300">
+                        <div class="flex justify-between items-center border-1 border-[#224b5d]">
+                            <h6 class="font-regular px-2 border-r-1 border-[#224b5d]">Npm </h6>
+                            <span class="font-regular px-2 border-l-1 border-[#224b5d]">X</span>
+                        </div>
+                        <div class="p-2 border-1 border-t-0 border-[#224b5d]">
+                            <img class="h-32 bg-white" src="../../assets/images/npm.png" alt="">
+                        </div>
+                    </div>
+                        <div class="pt-0 shadow-2xl  hover:skew-x-6 transition-transform duration-300">
+                          <div class="flex justify-between items-center border-1 border-[#224b5d]">
+                              <h6 class="font-regular px-2 border-r-1 border-[#224b5d]">AWS </h6>
+                              <span class="font-regular px-2 border-l-1 border-[#224b5d]">X</span>
+                          </div>
+                          <div class="p-2 border-1 border-t-0 border-[#224b5d]">
+                              <img class="h-32 bg-white" src="../../assets/images/aws.png" alt="">
+                          </div>
+                      </div>
+                      <div class="pt-0 shadow-2xl  hover:skew-x-6 transition-transform duration-300">
+                        <div class="flex justify-between items-center border-1 border-[#224b5d]">
+                            <h6 class="font-regular px-2 border-r-1 border-[#224b5d]">Git ver. control </h6>
+                            <span class="font-regular px-2 border-l-1 border-[#224b5d]">X</span>
+                        </div>
+                        <div class="p-2 border-1 border-t-0 border-[#224b5d]">
+                            <img class="h-32 bg-white" src="../../assets/images/git.png" alt="">
+                        </div>
+                      </div>
+                      <div class="pt-0 shadow-2xl  hover:skew-x-6 transition-transform duration-300">
+                        <div class="flex justify-between items-center border-1 border-[#224b5d]">
+                            <h6 class="font-regular px-2 border-r-1 border-[#224b5d]">Jira</h6>
+                            <span class="font-regular px-2 border-l-1 border-[#224b5d]">X</span>
+                        </div>
+                        <div class="p-2 border-1 border-t-0 border-[#224b5d]">
+                            <img class="h-32 bg-white" src="../../assets/images/jira.png" alt="">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="font-bold text-gray-600 text-[12px] ml-5 mb-2 ">[...see more]</div>
+                </div>
+            </div>
+
+
+            <div class="relative">
+                <div
+                    class="shape bg-pink-400 absolute top-0 -left-4 w-100 h-100 rounded-full filter blur-xl opacity-70 mix-blend-multiply blob">
+                </div>
+                <div
+                    class="shape bg-yellow-400 absolute top-0 -right-4 w-100 h-100 rounded-full filter blur-xl opacity-70 mix-blend-multiply blob animation-delay-2000">
+                </div>
+                <div
+                    class="shape bg-violet-400 absolute -bottom-8 left-20 w-100 h-100 rounded-full filter blur-xl opacity-70 mix-blend-multiply blob animation-delay-4000">
+                </div>
+                <div
+                    class="shape bg-rose-400 absolute -top-50 left-150 w-70 h-70 rounded-full filter blur-xl opacity-70 mix-blend-multiply blob animation-delay-4000">
+                </div>
+
+                <div class="grid ">
+                    <pre class="json-viewer bg-gray-900 text-green-400 p-4 rounded-2xl opacity-85 w-150 border border-gray-700"
+                        [innerHTML]="formatJsonWithLineNumbers(filteredSkillsDataList)"></pre>
+                </div>
+            </div>
         </div>
     </div>
 </section>
